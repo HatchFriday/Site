@@ -20,10 +20,11 @@ var players = [];
 var gtile, btile, atile, barrier_tile;
 
 function preload() {
-    gtile = loadImage("imgs/grass.png");
+    gtile = loadImage("https://s3-us-west-2.amazonaws.com/s.cdpn.io/154887/Routetut.png");
     btile = loadImage("https://vignette.wikia.nocookie.net/moom/images/9/90/Hat_10.png/revision/latest?cb=20171206230957");
     atile = loadImage("https://i.imgur.com/cglfIah.png");
-    barrier_tile = loadImage("imgs/metal_wall.png");
+    barrier_tile = loadImage("http://xmoto.tuxfamily.org/sprites/Textures/Textures/MetalTile_bw_880.png");
+
 }
 
 function setup() {
