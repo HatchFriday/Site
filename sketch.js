@@ -15,19 +15,12 @@ function setup() {
     canvas_element = createCanvas(400, 400); /* ONLY CHANGE THIS LINE TO CHANGE CANVAS DIMENSIONS */
 
     // HTML Styling canvas
-    cx = (windowWidth - width) / 2;
-    canvas_element.style('display', 'block');
+    canvas_element.style('display', 'flex');
     canvas_element.style('border','1px solid #000000');
     canvas_element.parent('canvas-place-holder');
-    canvas_element.style('margin-left', cx + "px");
-}
+    console.log(canvas_element.parent.size());
 
-function windowResized() {
-    // when the window resizes, adjust the canvas position
-    cx = (windowWidth - width) / 2;
-    canvas_element.style('margin-left', cx + "px");
 }
-
 
 function draw() {
     fill(random(0, 255),random(0, 255),random(0, 255));

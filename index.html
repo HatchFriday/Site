@@ -11,24 +11,16 @@
         <script src="sketch.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Harmattan" rel="stylesheet">
         <style type="text/css">
-            html, body {
-                margin: 0px;
-                top: 0px;
-                display: flex;
-                background-color: #bdd5fc;
-                overflow-x: hidden;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
+            html {
+            box-sizing: border-box;
             }
-            footer {
-                display: flex;
-                background-color: #000000;
-                overflow-x: hidden;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
+
+            body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
             }
+
             .section-heading {
                 font-family: 'Harmattan';
                 font-size: 5vh;
@@ -42,25 +34,128 @@
             tabend {
                 padding-left: 1em;
             }
+
+            p {
+             padding-right: 1%;
+             margin-bottom: 0.5em;
+             margin-top: 0.5em;
+            }
+
+            .container {
+             overflow: hidden;
+             background-color: rgb(255,0,51);
+             display: flex;
+            }
+
+            header {
+             background-color: rgb(0,153,255);
+             color: #fff;
+             padding: 1%;
+            }
+
+            header h1 {
+             margin: 0;
+             font-size: 2.5em;
+            }
+
+            header p {
+             margin: 0;
+             font-size: 1em
+            }
+
+            h1, h2 {
+             font-family: 'Barrio', sans-serif;
+             margin-bottom: 0.2em;
+            }
+
+            .center {
+             text-align: center;
+            }
+
+            .me {
+             height: 10em;
+             width: 10em;
+             background-color: rgb(153,0,255);
+             border-radius: 50%;
+             padding: 1%;
+            }
+
+            main {
+             background-color: rgb(0,255,51);
+             width: 72%;
+             color: rgb(0,153,255);
+             font-size: 1.2em;
+             padding-left: 2%;
+            }
+
+            main h2 {
+             color: #be1111;
+            }
+
+            .canvas-container{
+                display: flex;
+                justify-items: center;
+
+            }
+
+            aside {
+             background-color: rgb(255,0,51);
+             color: #fff;
+             width: 20%;
+             /*float: left;*/
+             flex-grow: 1;
+            }
+
+            aside ul li a {
+             font-size: 2em;
+             color: #fff;
+             cursor: pointer;
+             font-family: 'Barrio';
+             line-height: 1.4em;
+            }
+
+            aside ul li a:hover {
+             color: #4c8244;
+            }
+
+            footer {
+             background-color: rgb(0,153,255);
+             color: #4c8244;
+            }
+
+            a, u {
+             text-decoration: none;
+            }
+
+            .icon {
+             padding: 1.5%;
+             color: #4c8244;
+            }
+
+            @media only screen and (max-device-width: 480px) {
+             aside {
+               display: none;
+             }
+            }
         </style>
     </head>
      <body>
     <header class="center">
 <!-- img tag add image that describes you in the src -->
-<!--  alt should describe what the image is.  this is for screen readers and when the image does not load  --> 
+<!--  alt should describe what the image is.  this is for screen readers and when the image does not load  -->
       <img class='me' src='' alt=' Me'>
-      
+
 <!--  h1 is the largest text in your site.  Write your name inside the h1 tag  -->
-      <h1></h1>
+      <h1>test</h1>
 <!-- p, stands for paragraph.  Add your address or a fun sentence inside the p tag   -->
-      <p></p>
+      <p>test2</p>
     </header>
 
     <div class="container">
       <aside>
 <!-- ul, stands for unordered list.  Here you'll create different links to parts of your site -->
         <ul>
-          
+
 <!--  li, stands for list item  -->
           <li>
 <!-- a, stands for anchor tag and lets us navigate to other sites or places within your site using href  -->
@@ -110,7 +205,7 @@
           <p></p>
         </section>
         <section>
-            <div style="background-color: #EEEEEE; width:100%; align-content: center">
+            <div style="background-color: #EEEEEE; width:80%; align-content: center">
             <br>
             <br>
             <font class='section-heading'> My Showcase </font>
@@ -124,7 +219,9 @@
                 no longer indented rest of description
 
             </p>
+            <div class="canvas-container">
             <div id="canvas-place-holder"> </div>
+        </div>
             <br>
             <br>
                 <tab>Instructions on how to interact with my showcase
@@ -138,7 +235,7 @@
             <br>
             <br>
         </div>
-          </section>
+    </section>
       </main>
     </div>
     <footer class="center" id="social-media">
